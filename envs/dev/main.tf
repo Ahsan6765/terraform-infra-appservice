@@ -9,8 +9,8 @@ module "app_service_plan" {
   name                = var.app_service_plan_name
   location            = var.location
   resource_group_name = module.resource_group.resource_group_name
-  sku_tier            = "Standard"
-  sku_size            = "S1"
+  sku_tier            = var.sku_tier
+  sku_size            = var.sku_size
 }
 
 module "webapp" {
@@ -22,7 +22,7 @@ module "webapp" {
   app_service_name = var.app_service_name
   service_plan_id  = module.app_service_plan.service_plan_id
 
-  linux_fx_version = var.linux_fx_version
+  node_version     = var.node_version
 
   github_repo_url = var.github_repo_url
   github_branch   = var.github_branch

@@ -25,15 +25,15 @@ variable "sku_size" {
   default     = "S1"
 }
 
-variable "linux_fx_version" {
-  description = "Runtime stack for Linux web app, e.g. NODE|18-lts or DOTNETCORE|6.0"
-  type        = string
-  default     = "NODE|18-lts"
-}
-
 variable "service_plan_id" {
   description = "The resource id of an existing App Service Plan to attach the web app to"
   type        = string
+}
+
+variable "node_version" {
+  description = "Node.js major version to use for the web app (e.g. 18)"
+  type        = string
+  default     = "22-lts"
 }
 
 variable "github_repo_url" {

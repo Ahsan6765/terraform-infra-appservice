@@ -1,11 +1,15 @@
-resource "azurerm_linux_web_app" "app" {
+resource "azurerm_linux_web_app" "ahwebapp3212_app" {
   name                = var.app_service_name
   location            = var.location
   resource_group_name = var.resource_group_name
   service_plan_id     = var.service_plan_id
 
   site_config {
-    linux_fx_version = var.linux_fx_version
+    application_stack {
+      node_version = var.node_version
+    }
+    always_on       = true
+    minimum_tls_version = "1.2"
   }
 
   identity {
@@ -25,7 +29,7 @@ resource "azurerm_linux_web_app" "app" {
 # with appropriate permissions.
 #
 # resource "azurerm_web_app_source_control" "source_control" {
-#   app_id      = azurerm_linux_web_app.app.id
+#   app_id      = azurerm_linux_web_app.ahwebapp3212_app.id
 #   repo_url    = var.github_repo_url
 #   branch      = var.github_branch
 #   is_manual_integration = true

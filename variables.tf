@@ -23,10 +23,10 @@ variable "github_token" {
   default     = ""
 }
 
-variable "linux_fx_version" {
-  description = "Runtime stack for the Linux web app. Defaults to Node.js 18 LTS."
+variable "node_version" {
+  description = "Node.js major version for the web app (e.g. 18)"
   type        = string
-  default     = "NODE|18-lts"
+  default     = "22-lts"
 }
 
 variable "environment" {

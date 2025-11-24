@@ -18,10 +18,22 @@ variable "app_service_name" {
   type        = string
 }
 
-variable "linux_fx_version" {
-  description = "Runtime stack for the Linux web app. Defaults to Node.js 18 LTS."
+variable "node_version" {
+  description = "Node.js major version to use for the dev web app (e.g. 18)"
   type        = string
-  default     = "NODE|18-lts"
+  default     = "22-lts"
+}
+
+variable "sku_tier" {
+  description = "SKU tier for App Service Plan in dev (Basic/Standard/Premium)"
+  type        = string
+  default     = "Basic"
+}
+
+variable "sku_size" {
+  description = "SKU size for App Service Plan in dev (e.g. B1, S1)"
+  type        = string
+  default     = "B1"
 }
 
 variable "github_repo_url" {
