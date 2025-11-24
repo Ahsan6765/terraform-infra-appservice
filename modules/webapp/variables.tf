@@ -54,3 +54,9 @@ variable "github_token" {
   sensitive   = true
   default     = ""
 }
+
+variable "app_settings" {
+  description = "Additional app settings to apply to the Web App (map)"
+  type        = map(string)
+  default     = {}
+}
