@@ -1,0 +1,67 @@
+### Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+terraform.tfvars.json
+*.tfplan
+*.tfstate.backup
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+
+### Environment / Secrets
+.env
+.env.*
+*.secret
+
+### Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+
+### IDEs / Editors
+.vscode/
+*.code-workspace
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln
+.vscode-test/
+.vs/
+
+### OS generated files
+Thumbs.db
+.DS_Store
+ehthumbs.db
+Desktop.ini
+
+### Azure / Publishing
+*.PublishSettings
+*.publishsettings
+*.azurepubxml
+azureProfile.json
+*.publishsettings
+*.azureStack
+
+### Logs
+*.log
+
+### Certificates and keys
+*.pem
+*.key
+*.crt
+*.pfx
+
+### Misc
+*.bak
+*.backup
+*.swp
+~$*
+

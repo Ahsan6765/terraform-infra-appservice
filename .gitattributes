@@ -1,0 +1,18 @@
+# Ensure consistent line endings and treat text files correctly
+* text=auto
+
+# Keep shell scripts LF
+*.sh text eol=lf
+
+# Terraform files should be LF
+*.tf text eol=lf
+
+# PowerShell scripts should remain CRLF on Windows
+*.ps1 text eol=crlf
+
+# Mark binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
